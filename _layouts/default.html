@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ page.title }}</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source Code Pro|Poppins"
+    />
+    <link rel="stylesheet" href="/assets/css/tailwind.css" />
+  </head>
+  <body class="bg-yellow-900 overscroll-none">
+    <header>
+      <div class="h-2 bg-yellow-500 shadow-inner"></div>
+      <div class="flex items-center justify-center h-48 gap-5 bg-gray-800">
+        <img src="/assets/images/logo.svg" />
+        <img src="/assets/images/text.svg" />
+      </div>
+      {% include navigation.html %}
+    </header>
+
+    <div class="p-10 text-sm text-yellow-500 font-body">{{ content }}</div>
+  </body>
+</html>

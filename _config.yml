@@ -1,0 +1,9 @@
+keep:
+  - assets/css/tailwind.css
+
+exclude:
+  - package.json
+  - package-lock.json
+  - readme.md
+
+incremental: true
