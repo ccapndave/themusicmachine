@@ -19,12 +19,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gems-
 
-      # Build tailwind.css
+      # Build tailwind.css in-place
       - uses: actions/setup-node@v2
         with:
           node-version: "14"
       - run: yarn install
-      - run: yarn postcss assets/css/tailwind.css -o /github/workspace/build/assets/css/tailwind.css
+      - run: yarn postcss assets/css/tailwind.css -o assets/css/tailwind.css
 
       # Standard usage
       - uses: helaili/jekyll-action@v2
