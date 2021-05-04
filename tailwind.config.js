@@ -4,6 +4,7 @@ module.exports = {
     "./_includes/**/*.html",
     "./_layouts/**/*.html",
     "./_pages/**/*.html",
+    "./_data/**/*.yml",
     "./*.html",
   ],
   darkMode: false, // or 'media' or 'class'

@@ -1,0 +1,11 @@
+---
+title: Repetoire
+layout: default
+permalink: /repetoire
+---
+
+<div class="flex flex-wrap items-center gap-4 p-4">
+  {% for song in site.data.songs %}
+  <a href="https://www.youtube.com/results?search_query={{ song }} official music video" target="_blank" class="{% cycle "text-sm", "text-base", "text-lg", "text-xl", "text-2xl", "text-lg", "text-base" %}">{{ song }}</a>
+  {% endfor %}
+</div>

@@ -7,9 +7,12 @@
     <li class="px-2">
       <a
         href="{{ item.link }}"
-        class="{% if page.url == item.link %}text-yellow-900 text-base font-black{% else %}text-yellow-900-1/2 text-sm{% endif %}"
+        class="flex items-center {% if page.url == item.link %}text-yellow-900 text-base font-black{% else %}text-yellow-900-1/2 text-sm{% endif %}"
       >
-        {{ item.name }}
+        {% if item.icon %}
+        <div class="mr-1">{{ item.icon }}</div>
+        {% endif %}
+        <div>{{ item.name }}</div>
       </a>
     </li>
     {% if forloop.last != true %}
