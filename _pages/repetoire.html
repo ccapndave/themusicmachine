@@ -4,8 +4,8 @@ layout: default
 permalink: /repetoire
 ---
 
-<div class="flex flex-wrap items-center gap-4 p-4">
+<div class="flex flex-wrap items-center justify-center gap-4 p-4">
   {% for song in site.data.songs %}
-  <a href="https://www.youtube.com/results?search_query={{ song }} official music video" target="_blank" class="{% cycle "text-sm", "text-base", "text-lg", "text-xl", "text-2xl", "text-lg", "text-base" %}">{{ song }}</a>
+  <a href="https://www.youtube.com/results?search_query={{ song }} official music video" target="_blank" class="{% cycle "text-xs sm:text-sm", "text-sm sm:text-base", "text-base sm:text-lg", "text-lg sm:text-xl", "text-xl sm:text-2xl", "text-lg sm:text-xl", "text-base sm:text-lg", "text-sm sm:text-base", "text-xs sm:text-sm" %}">{{ song }}</a>
   {% endfor %}
 </div>
