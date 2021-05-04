@@ -1,6 +1,9 @@
 keep:
   - assets/css/tailwind.css
 
+include:
+  - _pages
+
 exclude:
   - package.json
   - package-lock.json

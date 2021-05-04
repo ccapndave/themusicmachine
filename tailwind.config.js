@@ -1,6 +1,11 @@
 module.exports = {
   mode: "jit",
-  purge: ["./_includes/**/*.html", "./_layouts/**/*.html", "./*.html"],
+  purge: [
+    "./_includes/**/*.html",
+    "./_layouts/**/*.html",
+    "./_pages/**/*.html",
+    "./*.html",
+  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
