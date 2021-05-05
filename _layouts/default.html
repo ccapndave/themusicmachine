@@ -17,7 +17,7 @@
         <img src="/assets/images/logo.svg" />
         <img src="/assets/images/text.svg" />
       </div>
-      {% include navigation.html %}
+      {% include navigation.html navigation=site.data.header_nav %}
     </header>
 
     <div class="flex justify-center">
@@ -27,5 +27,9 @@
         {{ content }}
       </div>
     </div>
+
+    <footer>
+      {% include navigation.html navigation=site.data.footer_nav %}
+    </footer>
   </body>
 </html>
