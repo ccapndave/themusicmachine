@@ -3,84 +3,88 @@ layout: default
 permalink: /contact
 ---
 
-<div id="contact-success" class="hidden w-[70vw] p-5 px-8 mb-10 text-lg bg-green-600 rounded-lg text-green-50">
-  <span class="pr-3">✓</span> Your message was sent successfully.
+<div class="flex justify-center">
+  <div class="w-full max-w-[70vw]">
+    <div id="contact-success" class="hidden w-full p-5 px-8 mb-10 text-lg bg-green-600 rounded-lg text-green-50">
+      <span class="pr-3">✓</span> Your message was sent successfully.
+    </div>
+
+    <div id="contact-error" class="hidden w-full p-5 px-8 mb-10 text-lg bg-red-600 rounded-lg text-red-50">
+      <span class="pr-3">✖</span> There was a problem sending your message. Please try again, or get in touch with us via our Facebook page.
+    </div>
+
+    <form
+      id="contact-form"
+      action="{% if jekyll.environment == "development" %}http://localhost:9292/send_email{% else %}https://keendevelopment-contact.herokuapp.com/send_email{% endif %}"
+      method="post"
+      class="w-full pb-1"
+    >
+      <script src="https://www.recaptcha.net/recaptcha/api.js" async defer></script>
+
+      <input
+        type="hidden"
+        name="to"
+        value="ws-bfnyyYuhvISm1M2JRM5mYKstZkiWzmVgNDm_5b6w="
+      />
+      <input type="hidden" name="site" value="4oNfg2rG7fgnGC-qpo6OmQ==" />
+
+      <div class="flex flex-col w-full mb-12">
+        <label for="name" class="block mb-2 font-extrabold text-yellow-600"
+          >Name</label
+        >
+        <input
+          type="text"
+          name="name"
+          required
+          autofocus
+          placeholder="Your name"
+          class="py-1 text-lg placeholder-yellow-800 bg-transparent border-b-2 border-yellow-600 appearance-none focus:outline-none focus:ring-transparent"
+        />
+      </div>
+
+      <div class="flex flex-col w-full my-12">
+        <label for="email" class="block mb-2 font-extrabold text-yellow-600"
+          >Email</label
+        >
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="Your email address"
+          class="py-1 text-lg placeholder-yellow-800 bg-transparent border-b-2 border-yellow-600 appearance-none focus:outline-none focus:ring-transparent"
+        />
+      </div>
+
+      <div class="flex flex-col w-full my-12">
+        <label for="message" class="block mb-2 font-extrabold text-yellow-600"
+          >Message</label
+        >
+        <textarea
+          name="message"
+          required
+          placeholder="What would you like to say?"
+          class="h-64 p-5 text-lg placeholder-yellow-800 bg-transparent border-2 border-yellow-600 rounded-lg appearance-none focus:outline-none focus:ring-transparent"
+        ></textarea>
+      </div>
+
+      <div class="flex justify-center">
+        <div
+          data-sitekey="6Lf5f8gaAAAAAA-ccL8I5eK6AkRNtH0KAw25UK5h"
+          class="g-recaptcha"
+          data-theme="light"
+        ></div>
+      </div>
+
+      <div class="flex justify-center my-14">
+        <input
+          type="submit"
+          value="Send"
+          class="w-64 h-20 text-xl font-extrabold text-white bg-yellow-500 cursor-pointer rounded-xl"
+        />
+      </div>
+    </form>
+  </div>
 </div>
-
-<div id="contact-error" class="hidden w-[70vw] p-5 px-8 mb-10 text-lg bg-red-600 rounded-lg  text-red-50">
-  <span class="pr-3">✖</span> There was a problem sending your message. Please try again, or get in touch with us via our Facebook page.
-</div>
-
-<form
-  id="contact-form"
-  action="{% if jekyll.environment == "development" %}http://localhost:9292/send_email{% else %}https://keendevelopment-contact.herokuapp.com/send_email{% endif %}"
-  method="post"
-  class="w-[70vw] pb-1"
->
-  <script src="https://www.recaptcha.net/recaptcha/api.js" async defer></script>
-
-  <input
-    type="hidden"
-    name="to"
-    value="ws-bfnyyYuhvISm1M2JRM5mYKstZkiWzmVgNDm_5b6w="
-  />
-  <input type="hidden" name="site" value="4oNfg2rG7fgnGC-qpo6OmQ==" />
-
-  <div class="flex flex-col w-full mb-12">
-    <label for="name" class="block mb-2 font-extrabold text-yellow-600"
-      >Name</label
-    >
-    <input
-      type="text"
-      name="name"
-      required
-      autofocus
-      placeholder="Your name"
-      class="py-1 text-lg placeholder-yellow-800 bg-transparent border-b-2 border-yellow-600 appearance-none focus:outline-none focus:ring-transparent"
-    />
-  </div>
-
-  <div class="flex flex-col w-full my-12">
-    <label for="email" class="block mb-2 font-extrabold text-yellow-600"
-      >Email</label
-    >
-    <input
-      type="email"
-      name="email"
-      required
-      placeholder="Your email address"
-      class="py-1 text-lg placeholder-yellow-800 bg-transparent border-b-2 border-yellow-600 appearance-none focus:outline-none focus:ring-transparent"
-    />
-  </div>
-
-  <div class="flex flex-col w-full my-12">
-    <label for="message" class="block mb-2 font-extrabold text-yellow-600"
-      >Message</label
-    >
-    <textarea
-      name="message"
-      required
-      placeholder="What would you like to say?"
-      class="h-64 p-5 text-lg placeholder-yellow-800 bg-transparent border-2 border-yellow-600 rounded-lg appearance-none focus:outline-none focus:ring-transparent"
-    ></textarea>
-  </div>
-
-  <div class="flex justify-center">
-    <div
-      data-sitekey="6Lf5f8gaAAAAAA-ccL8I5eK6AkRNtH0KAw25UK5h"
-      class="g-recaptcha"
-      data-theme="light"
-    ></div>
-  </div>
-
-  <div class="flex justify-center my-14">
-    <input
-      type="submit"
-      value="Send"
-      class="w-64 h-20 text-xl font-extrabold text-white bg-yellow-500 cursor-pointer rounded-xl"
-    />
-  </div>
-</form>
 
 <div id="contact-loader" class="absolute inset-0 hidden">
   <div class="flex items-center justify-center w-full h-full">
