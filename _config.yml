@@ -10,3 +10,11 @@ exclude:
   - readme.md
 
 incremental: true
+
+plugins:
+  - jekyll-seo-tag
+
+# SEO stuff
+title: The Music Machine
+tagline: Apres-ski and party band based in Switzerland
+description: The ultimate Swiss party band for your event.  Apres-ski, party, wedding or anything!  Visit our site for videos and recordings.
