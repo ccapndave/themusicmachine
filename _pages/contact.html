@@ -3,7 +3,16 @@ layout: default
 permalink: /contact
 ---
 
+<div id="contact-success" class="hidden w-[70vw] p-5 px-8 mb-10 text-lg bg-green-600 rounded-lg text-green-50">
+  <span class="pr-3">✓</span> Your message was sent successfully.
+</div>
+
+<div id="contact-error" class="hidden w-[70vw] p-5 px-8 mb-10 text-lg bg-red-600 rounded-lg  text-red-50">
+  <span class="pr-3">✖</span> There was a problem sending your message. Please try again, or get in touch with us via our Facebook page.
+</div>
+
 <form
+  id="contact-form"
   action="{% if jekyll.environment == "development" %}http://localhost:9292/send_email{% else %}https://keendevelopment-contact.herokuapp.com/send_email{% endif %}"
   method="post"
   class="w-[70vw] pb-1"
@@ -68,7 +77,58 @@ permalink: /contact
     <input
       type="submit"
       value="Send"
-      class="w-64 h-20 text-xl font-extrabold text-white bg-yellow-500 rounded-xl"
+      class="w-64 h-20 text-xl font-extrabold text-white bg-yellow-500 cursor-pointer rounded-xl"
     />
   </div>
 </form>
+
+<div id="contact-loader" class="absolute inset-0 hidden">
+  <div class="flex items-center justify-center w-full h-full">
+    <div class="loader">Loading...</div>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const contactForm = document.querySelector("#contact-form");
+  const contactLoader = document.querySelector("#contact-loader");
+  const contactSuccess = document.querySelector("#contact-success");
+  const contactError = document.querySelector("#contact-error");
+
+  const lockForm = () => {
+    contactForm.classList.add("opacity-50", "pointer-events-none");
+    contactLoader.classList.remove("hidden");
+  }
+
+  const unlockForm = () => {
+    contactForm.classList.remove("opacity-50", "pointer-events-none");
+    contactLoader.classList.add("hidden");
+  }
+  
+  contactForm.addEventListener("submit", e => {
+    e.preventDefault();
+
+    lockForm();
+    
+    fetch(contactForm.getAttribute("action"), {
+      method: contactForm.getAttribute("method"),
+      body: new URLSearchParams(new FormData(contactForm))
+    })
+    .then(res => res.json())
+    .then(result => {
+      contactSuccess.classList.toggle("hidden", !result.success);
+      contactError.classList.toggle("hidden", result.success);
+
+      if (result.success) {
+        contactForm.reset();
+      }
+
+      unlockForm();
+    })
+    .catch(e => {
+      console.error(e);
+      unlockForm();
+    });
+  });
+}, false);
+</script>
