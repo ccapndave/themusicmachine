@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="fixed inset-0">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,7 +10,9 @@
     />
     <link rel="stylesheet" href="/assets/css/tailwind.css" />
   </head>
-  <body class="bg-yellow-900 overscroll-none">
+  <body
+    class="flex flex-col h-full overflow-y-auto bg-yellow-900 overscroll-none"
+  >
     <header>
       <div class="h-2 bg-yellow-500 shadow-inner"></div>
       <div class="flex items-center justify-center h-48 gap-5 bg-gray-800">
@@ -20,7 +22,7 @@
       {% include navigation.html navigation=site.data.header_nav %}
     </header>
 
-    <div class="flex justify-center">
+    <div class="flex justify-center flex-1 overflow-y-auto">
       <div
         class="max-w-full p-10 text-sm text-yellow-500 font-body max-w-[1280px]"
       >
