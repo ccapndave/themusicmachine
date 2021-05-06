@@ -13,8 +13,10 @@ incremental: true
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 # SEO stuff
 title: The Music Machine
 tagline: Apres-ski and party band based in Switzerland
 description: The ultimate Swiss party band for your event.  Apres-ski, party, wedding or anything!  Visit our site for videos and recordings.
+url: "https://www.musicmachine.ch"
