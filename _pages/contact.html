@@ -28,7 +28,7 @@ permalink: /contact
       />
       <input type="hidden" name="site" value="4oNfg2rG7fgnGC-qpo6OmQ==" />
 
-      <div class="flex flex-col w-full mb-12">
+      <div id="name-block" class="flex flex-col w-full mb-12">
         <label for="name" class="block mb-2 font-extrabold text-yellow-600"
           >Name</label
         >
@@ -39,10 +39,11 @@ permalink: /contact
           autofocus
           placeholder="Your name"
           class="py-1 text-lg placeholder-yellow-800 bg-transparent border-b-2 border-yellow-600 appearance-none focus:outline-none focus:ring-transparent"
+          onfocus="document.querySelector('#name-block').scrollIntoView({ behavior: 'smooth' })"
         />
       </div>
 
-      <div class="flex flex-col w-full my-12">
+      <div id="email-block" class="flex flex-col w-full my-12">
         <label for="email" class="block mb-2 font-extrabold text-yellow-600"
           >Email</label
         >
@@ -52,10 +53,11 @@ permalink: /contact
           required
           placeholder="Your email address"
           class="py-1 text-lg placeholder-yellow-800 bg-transparent border-b-2 border-yellow-600 appearance-none focus:outline-none focus:ring-transparent"
+          onfocus="document.querySelector('#email-block').scrollIntoView({ behavior: 'smooth' })"
         />
       </div>
 
-      <div class="flex flex-col w-full my-12">
+      <div id="message-block" class="flex flex-col w-full my-12">
         <label for="message" class="block mb-2 font-extrabold text-yellow-600"
           >Message</label
         >
@@ -64,6 +66,7 @@ permalink: /contact
           required
           placeholder="What would you like to say?"
           class="h-64 p-5 text-lg placeholder-yellow-800 bg-transparent border-2 border-yellow-600 rounded-lg appearance-none focus:outline-none focus:ring-transparent"
+          onfocus="document.querySelector('#message-block').scrollIntoView({ behavior: 'smooth' })"
         ></textarea>
       </div>
 
@@ -124,7 +127,14 @@ document.addEventListener("DOMContentLoaded", () => {
       contactError.classList.toggle("hidden", result.success);
 
       if (result.success) {
+        contactSuccess.classList.remove("hidden");
+        contactError.classList.add("hidden");
+        contactSuccess.scrollIntoView({ behavior: "smooth" });
         contactForm.reset();
+      } else {
+        contactSuccess.classList.add("hidden");
+        contactError.classList.remove("hidden");
+        contactError.scrollIntoView({ behavior: "smooth" });
       }
 
       unlockForm();
