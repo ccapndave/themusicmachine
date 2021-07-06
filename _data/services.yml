@@ -1,0 +1,6 @@
+- name: Apres-Ski
+  image: services/apres-ski.jpg
+- name: Public Events
+  image: services/public.jpg
+- name: Club
+  image: services/club.jpg

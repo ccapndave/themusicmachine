@@ -4,8 +4,10 @@ layout: default
 permalink: /repertoire
 ---
 
-<div class="flex flex-wrap items-center justify-center gap-4 p-4">
-  {% for song in site.data.songs %}
+<div class="flex flex-wrap items-center justify-center gap-4 px-4 sm:px-[15%] md:px-[20%]">
+  {% assign songCount = site.data.songs | size %}
+  {% assign songs = site.data.songs | sample: songCount %}
+  {% for song in songs %}
   <a href="https://www.youtube.com/results?search_query={{ song }} official music video" target="_blank" class="{% cycle "text-xs sm:text-sm", "text-sm sm:text-base", "text-base sm:text-lg", "text-lg sm:text-xl", "text-xl sm:text-2xl", "text-lg sm:text-xl", "text-base sm:text-lg", "text-sm sm:text-base", "text-xs sm:text-sm" %}">{{ song }}</a>
   {% endfor %}
 </div>
