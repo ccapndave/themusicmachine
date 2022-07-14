@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="fixed inset-0">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source Code Pro|Poppins"
+    />
+    <link rel="stylesheet" href="/assets/css/tailwind.css" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>The Music Machine | Apres-ski and party band based in Switzerland</title>
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="The Music Machine" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The ultimate Swiss party band for your event. Apres-ski, party, wedding or anything! Visit our site for videos and recordings." />
+<meta property="og:description" content="The ultimate Swiss party band for your event. Apres-ski, party, wedding or anything! Visit our site for videos and recordings." />
+<link rel="canonical" href="https://www.musicmachine.ch/contact" />
+<meta property="og:url" content="https://www.musicmachine.ch/contact" />
+<meta property="og:site_name" content="The Music Machine" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="The Music Machine" />
+<script type="application/ld+json">
+{"description":"The ultimate Swiss party band for your event. Apres-ski, party, wedding or anything! Visit our site for videos and recordings.","url":"https://www.musicmachine.ch/contact","@type":"WebPage","headline":"The Music Machine","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body
+    class="flex flex-col h-full overflow-y-auto bg-yellow-900 overscroll-none"
+  >
+    <header>
+      <div class="h-2 bg-yellow-500 shadow-inner"></div>
+      <div class="flex items-center justify-center h-48 gap-5 bg-gray-800">
+        <img src="/assets/images/logo.svg" />
+        <img src="/assets/images/text.svg" />
+      </div>
+      <nav
+  class="flex justify-center bg-yellow-500 h-14"
+  style="box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.25)"
+>
+  <ul
+    class="flex flex-wrap items-center justify-center tracking-wide font-title"
+  >
+    
+    <li class="px-2">
+      <a
+        href="/"
+        class="flex items-center text-yellow-900-1/2 text-sm"
+      >
+        
+        <div>Home</div>
+      </a>
+    </li>
+    
+    <li class="px-2">
+      <img src="../assets/images/separator.svg" />
+    </li>
+     
+    <li class="px-2">
+      <a
+        href="/repertoire"
+        class="flex items-center text-yellow-900-1/2 text-sm"
+      >
+        
+        <div>Repertoire</div>
+      </a>
+    </li>
+    
+    <li class="px-2">
+      <img src="../assets/images/separator.svg" />
+    </li>
+     
+    <li class="px-2">
+      <a
+        href="/contact"
+        class="flex items-center text-yellow-900 text-base font-black"
+      >
+        
+        <div>Contact</div>
+      </a>
+    </li>
+     
+  </ul>
+</nav>
+
+    </header>
+
+    <div class="flex justify-center flex-1 overflow-y-auto">
+      <div class="p-10 text-sm text-yellow-500 font-body w-full max-w-[1280px]">
+        <div class="flex justify-center">
+  <div class="w-full max-w-[70vw]">
+    <div id="contact-success" class="hidden w-full p-5 px-8 mb-10 text-lg bg-green-600 rounded-lg text-green-50">
+      <span class="pr-3">✓</span> Your message was sent successfully.
+    </div>
+
+    <div id="contact-error" class="hidden w-full p-5 px-8 mb-10 text-lg bg-red-600 rounded-lg text-red-50">
+      <span class="pr-3">✖</span> There was a problem sending your message. Please try again, or get in touch with us via our Facebook page.
+    </div>
+
+    <form
+      id="contact-form"
+      action="https://keendevelopment-contact.herokuapp.com/send_email"
+      method="post"
+      class="w-full"
+    >
+      <script src="https://www.recaptcha.net/recaptcha/api.js" async defer></script>
+
+      <input
+        type="hidden"
+        name="to"
+        value="ws-bfnyyYuhvISm1M2JRM5mYKstZkiWzmVgNDm_5b6w="
+      />
+      <input type="hidden" name="site" value="4oNfg2rG7fgnGC-qpo6OmQ==" />
+
+      <div id="name-block" class="flex flex-col w-full mb-12">
+        <label for="name" class="block mb-2 font-extrabold text-yellow-600"
+          >Name</label
+        >
+        <input
+          type="text"
+          name="name"
+          required
+          autofocus
+          placeholder="Your name"
+          class="py-1 text-lg placeholder-yellow-800 bg-transparent border-b-2 border-yellow-600 appearance-none focus:outline-none focus:ring-transparent"
+          onfocus="document.querySelector('#name-block').scrollIntoView({ behavior: 'smooth' })"
+        />
+      </div>
+
+      <div id="email-block" class="flex flex-col w-full my-12">
+        <label for="email" class="block mb-2 font-extrabold text-yellow-600"
+          >Email</label
+        >
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="Your email address"
+          class="py-1 text-lg placeholder-yellow-800 bg-transparent border-b-2 border-yellow-600 appearance-none focus:outline-none focus:ring-transparent"
+          onfocus="document.querySelector('#email-block').scrollIntoView({ behavior: 'smooth' })"
+        />
+      </div>
+
+      <div id="message-block" class="flex flex-col w-full my-12">
+        <label for="message" class="block mb-2 font-extrabold text-yellow-600"
+          >Message</label
+        >
+        <textarea
+          name="message"
+          required
+          placeholder="What would you like to say?"
+          class="h-64 p-5 text-lg placeholder-yellow-800 bg-transparent border-2 border-yellow-600 rounded-lg appearance-none focus:outline-none focus:ring-transparent"
+          onfocus="document.querySelector('#message-block').scrollIntoView({ behavior: 'smooth' })"
+        ></textarea>
+      </div>
+
+      <div class="flex justify-center">
+        <div
+          data-sitekey="6Lf5f8gaAAAAAA-ccL8I5eK6AkRNtH0KAw25UK5h"
+          class="g-recaptcha"
+          data-theme="light"
+        ></div>
+      </div>
+
+      <div class="flex justify-center my-14">
+        <input
+          type="submit"
+          value="Send"
+          class="w-64 h-20 text-xl font-extrabold text-white bg-yellow-500 cursor-pointer rounded-xl"
+        />
+      </div>
+    </form>
+  </div>
+</div>
+
+<div id="contact-loader" class="absolute inset-0 hidden">
+  <div class="flex items-center justify-center w-full h-full">
+    <div class="loader">Loading...</div>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const contactForm = document.querySelector("#contact-form");
+  const contactLoader = document.querySelector("#contact-loader");
+  const contactSuccess = document.querySelector("#contact-success");
+  const contactError = document.querySelector("#contact-error");
+
+  const lockForm = () => {
+    contactForm.classList.add("opacity-50", "pointer-events-none");
+    contactLoader.classList.remove("hidden");
+  }
+
+  const unlockForm = () => {
+    contactForm.classList.remove("opacity-50", "pointer-events-none");
+    contactLoader.classList.add("hidden");
+  }
+  
+  contactForm.addEventListener("submit", e => {
+    e.preventDefault();
+
+    lockForm();
+    
+    fetch(contactForm.getAttribute("action"), {
+      method: contactForm.getAttribute("method"),
+      body: new URLSearchParams(new FormData(contactForm))
+    })
+    .then(res => res.json())
+    .then(result => {
+      contactSuccess.classList.toggle("hidden", !result.success);
+      contactError.classList.toggle("hidden", result.success);
+
+      if (result.success) {
+        contactSuccess.classList.remove("hidden");
+        contactError.classList.add("hidden");
+        contactSuccess.scrollIntoView({ behavior: "smooth" });
+        contactForm.reset();
+      } else {
+        contactSuccess.classList.add("hidden");
+        contactError.classList.remove("hidden");
+        contactError.scrollIntoView({ behavior: "smooth" });
+      }
+
+      unlockForm();
+    })
+    .catch(e => {
+      console.error(e);
+      unlockForm();
+    });
+  });
+}, false);
+</script>
+      </div>
+    </div>
+
+    <footer>
+      <nav
+  class="flex justify-center bg-yellow-500 h-14"
+  style="box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.25)"
+>
+  <ul
+    class="flex flex-wrap items-center justify-center tracking-wide font-title"
+  >
+    
+    <li class="px-2">
+      <a
+        href="https://www.facebook.com/MusicMachineCH"
+        class="flex items-center text-yellow-900-1/2 text-sm"
+      >
+        
+        <div class="mr-1"> <svg viewBox="0 0 14 14" width="14" height="14" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path d="M12.75 0.75H1.25C0.973437 0.75 0.75 0.973437 0.75 1.25V12.75C0.75 13.0266 0.973437 13.25 1.25 13.25H12.75C13.0266 13.25 13.25 13.0266 13.25 12.75V1.25C13.25 0.973437 13.0266 0.75 12.75 0.75ZM11.3062 4.39844H10.3078C9.525 4.39844 9.37344 4.77031 9.37344 5.31719V6.52187H11.2422L10.9984 8.40781H9.37344V13.25H7.425V8.40938H5.79531V6.52187H7.425V5.13125C7.425 3.51719 8.41094 2.6375 9.85156 2.6375C10.5422 2.6375 11.1344 2.68906 11.3078 2.7125V4.39844H11.3062Z" /> </svg> </div>
+        
+        <div>Facebook</div>
+      </a>
+    </li>
+    
+    <li class="px-2">
+      <img src="../assets/images/separator.svg" />
+    </li>
+     
+    <li class="px-2">
+      <a
+        href="https://www.soundcloud.com/MusicMachineCH"
+        class="flex items-center text-yellow-900-1/2 text-sm"
+      >
+        
+        <div class="mr-1"> <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"> <path d="M14.5 0H1.5C0.675 0 0 0.675 0 1.5V14.5C0 15.325 0.675 16 1.5 16H14.5C15.325 16 16 15.325 16 14.5V1.5C16 0.675 15.325 0 14.5 0ZM2.75 11H2.25L2 9.5L2.25 8H2.75L3 9.5L2.75 11ZM4.75 11H4.25L4 9L4.25 7H4.75L5 9L4.75 11ZM6.75 11H6.25L6 8L6.25 5H6.75L7 8L6.75 11ZM12.894 11L8.185 10.997C8.13544 10.9913 8.0896 10.9679 8.05582 10.9312C8.02204 10.8945 8.00259 10.8469 8.001 10.797V5.403C8.001 5.303 8.035 5.253 8.163 5.203C8.59671 5.03444 9.06369 4.96908 9.52702 5.01208C9.99035 5.05509 10.4373 5.20529 10.8326 5.4508C11.2279 5.69631 11.5606 6.0304 11.8045 6.42667C12.0485 6.82293 12.1969 7.2705 12.238 7.734C12.4964 7.62617 12.7775 7.58381 13.0562 7.61068C13.335 7.63756 13.6028 7.73283 13.8359 7.88805C14.0689 8.04327 14.2601 8.25364 14.3923 8.50047C14.5246 8.7473 14.5939 9.02297 14.594 9.303C14.594 10.241 13.832 11 12.894 11V11Z" /> </svg> </div>
+        
+        <div>Soundcloud</div>
+      </a>
+    </li>
+     
+  </ul>
+</nav>
+
+    </footer>
+  </body>
+</html>
